@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Artist Graphics</title>
@@ -16,30 +16,86 @@ header{
   background:yellow;
   color:black;
   text-align:center;
-  padding:40px;
+  padding:50px;
 }
+header h1{margin:0;font-size:36px;}
+header p{font-size:16px;}
+
 section{
-  padding:30px;
+  padding:40px 20px;
+  max-width:1100px;
+  margin:auto;
 }
+
+h2{
+  text-align:center;
+  color:yellow;
+  margin-bottom:30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
 .box{
   background:#111;
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
 }
+.box:hover{
+  transform:scale(1.05);
+  transition:0.3s;
+}
+
 .btn{
   display:inline-block;
-  padding:10px 20px;
+  padding:12px 28px;
   background:yellow;
   color:black;
   text-decoration:none;
-  border-radius:20px;
+  border-radius:30px;
+  font-weight:bold;
+  margin:8px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:10px;
+}
+
+.offer{
+  background:yellow;
+  color:black;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+}
+
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:none;
+}
+
+form button{
+  width:100%;
+  padding:12px;
+  background:yellow;
+  border:none;
+  border-radius:30px;
   font-weight:bold;
 }
+
 footer{
   background:#111;
   text-align:center;
-  padding:15px;
+  padding:20px;
+  font-size:14px;
 }
 </style>
 </head>
@@ -48,41 +104,81 @@ footer{
 
 <header>
   <h1>Artist Graphics</h1>
-  <p>Professional Designs 🎨</p>
+  <p>Professional Designs | Grow Your Brand 🎨</p>
 </header>
 
 <section>
-  <h2>Services</h2>
-  <div class="box">Post Design</div>
-  <div class="box">Reels Editing</div>
-  <div class="box">Logo Design</div>
+<h2>Our Services | आमच्या सेवा</h2>
+<div class="grid">
+  <div class="box">📌 Post Design</div>
+  <div class="box">🎬 Reels Editing</div>
+  <div class="box">🎨 Logo Design</div>
+</div>
 </section>
 
 <section>
-  <h2>Special Offer</h2>
+<h2>Why Choose Us? | आम्हालाच का?</h2>
+<div class="grid">
+  <div class="box">✔ Professional Designs</div>
+  <div class="box">✔ Fast Delivery</div>
+  <div class="box">✔ Affordable Price</div>
+  <div class="box">✔ Client Satisfaction</div>
+</div>
+</section>
+
+<section>
+<h2>Gallery | आमचं काम</h2>
+<div class="grid gallery">
+  <img src="https://via.placeholder.com/300x300" alt="Gallery Image 1">
+  <img src="https://via.placeholder.com/300x300" alt="Gallery Image 2">
+  <img src="https://via.placeholder.com/300x300" alt="Gallery Image 3">
+</div>
+</section>
+
+<section>
+<h2>Special Offer 🔥</h2>
+<div class="offer">
+  <h3>🎁 Free Post Redesign</h3>
+  <p>Limited Time Offer – आजच DM करा</p>
+  <a class="btn" href="https://www.instagram.com/artist_graphics_13/" target="_blank">Claim Now</a>
+</div>
+</section>
+
+<section>
+<h2>Payment | पेमेंट</h2>
+<div class="grid">
   <div class="box">
-    Free Post Redesign 🔥  
-    <br><br>
-    <a class="btn" href="https://www.instagram.com/artist_graphics_13/">DM Now</a>
+    <p>📱 Mobile users: Click below</p>
+    <a class="btn"
+       href="upi://pay?pa=8788162266@fam&pn=Artist%20Graphics&cu=INR">
+       Pay via UPI
+    </a>
+    <hr style="margin:20px 0;">
+    <p>💻 PC users: Scan QR Code</p>
+    <img src="upi-qr.png" width="220" alt="UPI QR Code">
+    <p style="font-size:13px;">Google Pay | PhonePe | Paytm</p>
+    <p style="font-size:13px;">✔ Secure Payment | ✔ Invoice Provided</p>
   </div>
+</div>
 </section>
 
 <section>
-  <h2>Payment</h2>
-  <div class="box">
-    Google Pay | PhonePe | Paytm <br><br>
-    <a class="btn" href="#">UPI Payment</a>
-  </div>
-</section>
+<h2>Contact Form | संपर्क करा</h2>
+<form>
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Email" required>
+  <textarea rows="4" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
 
-<section>
-  <h2>Contact</h2>
-  <a class="btn" href="https://wa.me/918788162266">WhatsApp</a>
-  <a class="btn" href="https://www.instagram.com/artist_graphics_13/">Instagram</a>
+<div style="text-align:center;margin-top:20px;">
+  <a class="btn" href="https://www.instagram.com/artist_graphics_13/" target="_blank">Instagram DM</a>
+  <a class="btn" href="https://wa.me/918788162266" target="_blank">WhatsApp</a>
+</div>
 </section>
 
 <footer>
-© 2026 Artist Graphics
+© 2026 Artist Graphics | All Rights Reserved
 </footer>
 
 </body>
