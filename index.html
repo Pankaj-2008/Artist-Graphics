@@ -9,14 +9,14 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:black;
-  color:white;
+  background:#000;
+  color:#fff;
 }
 header{
-  background:yellow;
-  color:black;
+  background:#ffd700;
+  color:#000;
   text-align:center;
-  padding:50px;
+  padding:50px 20px;
 }
 header h1{margin:0;font-size:36px;}
 header p{font-size:16px;}
@@ -29,8 +29,8 @@ section{
 
 h2{
   text-align:center;
-  color:yellow;
-  margin-bottom:30px;
+  color:#ffd700;
+  margin-bottom:25px;
 }
 
 .grid{
@@ -45,50 +45,22 @@ h2{
   border-radius:12px;
   text-align:center;
 }
-.box:hover{
-  transform:scale(1.05);
-  transition:0.3s;
-}
 
 .btn{
   display:inline-block;
   padding:12px 28px;
-  background:yellow;
-  color:black;
+  background:#ffd700;
+  color:#000;
   text-decoration:none;
   border-radius:30px;
   font-weight:bold;
   margin:8px;
 }
 
-.gallery img{
-  width:100%;
-  border-radius:10px;
-}
-
-.offer{
-  background:yellow;
-  color:black;
-  padding:30px;
-  border-radius:15px;
+.note{
   text-align:center;
-}
-
-form input, form textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-  border:none;
-}
-
-form button{
-  width:100%;
-  padding:12px;
-  background:yellow;
-  border:none;
-  border-radius:30px;
-  font-weight:bold;
+  font-size:15px;
+  margin-top:20px;
 }
 
 footer{
@@ -107,6 +79,7 @@ footer{
   <p>Professional Designs | Grow Your Brand 🎨</p>
 </header>
 
+<!-- SERVICES & CHARGES -->
 <section>
 <h2>Our Services & Charges | आमच्या सेवा</h2>
 
@@ -115,12 +88,12 @@ footer{
   <div class="box">
     <h3>🎨 Photo Editing</h3>
     <p>Normal Editing</p>
-    <strong>₹100 per photo</strong>
+    <strong>Up to ₹100 per photo</strong>
   </div>
 
   <div class="box">
     <h3>🎬 Video / Reel Editing</h3>
-    <p>₹300 – ₹500 per minute</p>
+    <strong>₹300 – ₹500 per minute</strong>
   </div>
 
   <div class="box">
@@ -141,43 +114,29 @@ footer{
 
   <div class="box">
     <h3>📊 PPT Presentation</h3>
-    <p>Professional Slides</p>
     <strong>₹10 – ₹15 per slide</strong>
   </div>
 
 </div>
 </section>
 
+<!-- CONTACT FIRST NOTE -->
 <section>
-<h2>Why Choose Us? | आम्हालाच का?</h2>
-<div class="grid">
-  <div class="box">✔ Professional Designs</div>
-  <div class="box">✔ Fast Delivery</div>
-  <div class="box">✔ Affordable Price</div>
-  <div class="box">✔ Client Satisfaction</div>
+<p class="note">
+📞 <strong>First Contact Us to Discuss Your Requirement</strong><br>
+Charges fix झाल्यावरच Payment घ्यायला जाईल.
+</p>
+
+<div style="text-align:center;">
+  <a class="btn" href="https://wa.me/918788162266" target="_blank">WhatsApp</a>
+  <a class="btn" href="https://www.instagram.com/artist_graphics_13/" target="_blank">Instagram DM</a>
 </div>
 </section>
 
-<section>
-<h2>Gallery | आमचं काम</h2>
-<div class="grid gallery">
-  <img src="https://via.placeholder.com/300x300" alt="Gallery Image 1">
-  <img src="https://via.placeholder.com/300x300" alt="Gallery Image 2">
-  <img src="https://via.placeholder.com/300x300" alt="Gallery Image 3">
-</div>
-</section>
-
-<section>
-<h2>Special Offer 🔥</h2>
-<div class="offer">
-  <h3>🎁 Free Post Redesign</h3>
-  <p>Limited Time Offer – आजच DM करा</p>
-  <a class="btn" href="https://www.instagram.com/artist_graphics_13/" target="_blank">Claim Now</a>
-</div>
-</section>
-
+<!-- PAYMENT -->
 <section>
 <h2>Payment | पेमेंट</h2>
+
 <div class="grid">
   <div class="box">
     <p>📱 Mobile users: Click below</p>
@@ -185,41 +144,27 @@ footer{
        href="upi://pay?pa=8788162266@fam&pn=Artist%20Graphics&cu=INR">
        Pay via UPI
     </a>
+
     <hr style="margin:20px 0;">
+
     <p>💻 PC users: Scan QR Code</p>
-    <img src="upi-qr.png.jpeg" width="220" alt="UPI QR Code">
+    <img src="upi-qr.png" width="220" alt="UPI QR Code">
+
     <p style="font-size:13px;">Google Pay | PhonePe | Paytm</p>
-    <p style="font-size:13px;">✔ Secure Payment | ✔ Invoice Provided</p>
   </div>
 </div>
-</section>
-<p style="text-align:center;font-size:14px;margin-top:20px;">
-⚠️ <strong>Note:</strong> आधी Contact करा, requirement confirm झाल्यावरच payment करा.
-</p>
 
-<section>
-<h2>Contact Form | संपर्क करा</h2>
-<form>
-  <input type="text" placeholder="Your Name" required>
-  <input type="email" placeholder="Email" required>
-  <textarea rows="4" placeholder="Your Message"></textarea>
-  <button type="submit">Send Message</button>
-</form>
-<p style="text-align:center;margin-bottom:20px;">
-📞 <strong>First Contact Us to Discuss Your Requirement</strong><br>
-Charges fix झाल्यावरच Payment टाकावे.
+<p class="note">
+⚠️ आधी Contact करा, काम final झाल्यावरच Payment करा.
 </p>
+</section>
+
+<!-- DELIVERY NOTE -->
 <section>
-<p style="text-align:center;font-size:15px;">
+<p class="note">
 ⏳ <strong>Delivery Time:</strong><br>
 तुमचं काम साधारणपणे <strong>7 ते 10 दिवसांत</strong> दिलं जाईल.
 </p>
-</section>
-
-<div style="text-align:center;margin-top:20px;">
-  <a class="btn" href="https://www.instagram.com/artist_graphics_13/" target="_blank">Instagram DM</a>
-  <a class="btn" href="https://wa.me/918788162266" target="_blank">WhatsApp</a>
-</div>
 </section>
 
 <footer>
@@ -228,5 +173,3 @@ Charges fix झाल्यावरच Payment टाकावे.
 
 </body>
 </html>
-
-
