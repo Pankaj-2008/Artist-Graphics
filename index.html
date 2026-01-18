@@ -16,159 +16,156 @@ header{
   background:#ffd700;
   color:#000;
   text-align:center;
-  padding:50px 20px;
+  padding:40px 20px;
 }
-header h1{margin:0;font-size:36px;}
-header p{font-size:16px;}
-
 section{
   padding:40px 20px;
   max-width:1100px;
   margin:auto;
 }
-
 h2{
   text-align:center;
   color:#ffd700;
-  margin-bottom:25px;
 }
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
 }
-
-.box{
+.card{
   background:#111;
   padding:25px;
   border-radius:12px;
   text-align:center;
+  cursor:pointer;
 }
-
+.details{
+  display:none;
+  margin-top:15px;
+  font-size:15px;
+}
 .btn{
   display:inline-block;
-  padding:12px 28px;
+  padding:12px 25px;
   background:#ffd700;
   color:#000;
   text-decoration:none;
-  border-radius:30px;
+  border-radius:25px;
+  margin:10px;
   font-weight:bold;
-  margin:8px;
 }
-
 .note{
   text-align:center;
   font-size:15px;
-  margin-top:20px;
+  margin-top:25px;
 }
-
 footer{
   background:#111;
   text-align:center;
-  padding:20px;
-  font-size:14px;
+  padding:15px;
 }
 </style>
+
+<script>
+function toggle(id){
+  var x=document.getElementById(id);
+  x.style.display = x.style.display==="block" ? "none" : "block";
+}
+</script>
 </head>
 
 <body>
 
 <header>
-  <h1>Artist Graphics</h1>
-  <p>Professional Designs | Grow Your Brand 🎨</p>
+<h1>Artist Graphics</h1>
+<p>Design • Editing • Branding</p>
 </header>
 
-<!-- SERVICES & CHARGES -->
+<!-- SERVICES -->
 <section>
-<h2>Our Services & Charges | आमच्या सेवा</h2>
+<h2>Our Services (Tap to View Details)</h2>
 
 <div class="grid">
 
-  <div class="box">
-    <h3>🎨 Photo Editing</h3>
-    <p>Normal Editing</p>
-    <strong>Up to ₹100 per photo</strong>
-  </div>
+<div class="card" onclick="toggle('s1')">
+<h3>🎨 Photo Editing</h3>
+<div class="details" id="s1">
+<p>Normal Photo Editing</p>
+<strong>Up to ₹100 per photo</strong>
+</div>
+</div>
 
-  <div class="box">
-    <h3>🎬 Video / Reel Editing</h3>
-    <strong>₹300 – ₹500 per minute</strong>
-  </div>
+<div class="card" onclick="toggle('s2')">
+<h3>🎬 Video / Reel Editing</h3>
+<div class="details" id="s2">
+<strong>₹300 – ₹500 per minute</strong>
+</div>
+</div>
 
-  <div class="box">
-    <h3>📸 Reel Shoot</h3>
-    <p>Normal Reel Shoot</p>
-    <strong>₹500 – ₹1000</strong>
-    <p>Program Reel Shoot</p>
-    <strong>₹1000 – ₹1500</strong>
-  </div>
+<div class="card" onclick="toggle('s3')">
+<h3>📸 Reel Shoot</h3>
+<div class="details" id="s3">
+<p>Normal Reel Shoot: ₹500 – ₹1000</p>
+<p>Program Reel Shoot: ₹1000 – ₹1500</p>
+</div>
+</div>
 
-  <div class="box">
-    <h3>🎨 Logo Design</h3>
-    <p>Basic Logo</p>
-    <strong>Up to ₹300</strong>
-    <p>Professional Logo</p>
-    <strong>Up to ₹500</strong>
-  </div>
+<div class="card" onclick="toggle('s4')">
+<h3>🎨 Logo Design</h3>
+<div class="details" id="s4">
+<p>Basic Logo: Up to ₹300</p>
+<p>Professional Logo: Up to ₹500</p>
+</div>
+</div>
 
-  <div class="box">
-    <h3>📊 PPT Presentation</h3>
-    <strong>₹10 – ₹15 per slide</strong>
-  </div>
+<div class="card" onclick="toggle('s5')">
+<h3>📊 PPT Presentation</h3>
+<div class="details" id="s5">
+<strong>₹10 – ₹15 per slide</strong>
+</div>
+</div>
 
 </div>
 </section>
 
-<!-- CONTACT FIRST NOTE -->
+<!-- CONTACT -->
 <section>
 <p class="note">
-📞 <strong>First Contact Us to Discuss Your Requirement</strong><br>
-Charges fix झाल्यावरच Payment घ्यायला जाईल.
+📞 <strong>First Contact Us</strong><br>
+Requirement discuss करून charges fix केल्यावरच payment करा.
 </p>
 
 <div style="text-align:center;">
-  <a class="btn" href="https://wa.me/918788162266" target="_blank">WhatsApp</a>
-  <a class="btn" href="https://www.instagram.com/artist_graphics_13/" target="_blank">Instagram DM</a>
+<a class="btn" href="https://wa.me/918788162266">WhatsApp</a>
+<a class="btn" href="https://www.instagram.com/artist_graphics_13/">Instagram</a>
 </div>
 </section>
 
 <!-- PAYMENT -->
 <section>
-<h2>Payment | पेमेंट</h2>
+<h2>Payment Options</h2>
 
-<div class="grid">
-  <div class="box">
-    <p>📱 Mobile users: Click below</p>
-    <a class="btn"
-       href="upi://pay?pa=8788162266@fam&pn=Artist%20Graphics&cu=INR">
-       Pay via UPI
-    </a>
+<p class="note">काम final झाल्यावर खालीलपैकी एक payment method निवडा</p>
 
-    <hr style="margin:20px 0;">
-
-    <p>💻 PC users: Scan QR Code</p>
-    <img src="upi-qr.png" width="220" alt="UPI QR Code">
-
-    <p style="font-size:13px;">Google Pay | PhonePe | Paytm</p>
-  </div>
+<div style="text-align:center;">
+<a class="btn" href="upi://pay?pa=8788162266@fam&pn=Artist%20Graphics&cu=INR">
+Pay via UPI
+</a>
+<br><br>
+<p>OR Scan QR</p>
+<img src="upi-qr.png" width="220">
 </div>
-
-<p class="note">
-⚠️ आधी Contact करा, काम final झाल्यावरच Payment करा.
-</p>
 </section>
 
-<!-- DELIVERY NOTE -->
+<!-- DELIVERY -->
 <section>
 <p class="note">
-⏳ <strong>Delivery Time:</strong><br>
-तुमचं काम साधारणपणे <strong>7 ते 10 दिवसांत</strong> दिलं जाईल.
+⏳ Delivery Time: <strong>7 ते 10 दिवसांत</strong> काम मिळेल.
 </p>
 </section>
 
 <footer>
-© 2026 Artist Graphics | All Rights Reserved
+© Artist Graphics
 </footer>
 
 </body>
