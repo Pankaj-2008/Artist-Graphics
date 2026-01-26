@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services | Artist Graphics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  background:#000;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  margin:0;
+}
+section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
+}
+h1{color:#ffd700}
+.box{
+  background:#111;
+  padding:20px;
+  border-radius:12px;
+  margin:20px 0;
+}
+select{
+  padding:12px;
+  width:90%;
+  max-width:400px;
+  border-radius:8px;
+  font-size:16px;
+}
+.hidden{display:none;}
+.btn{
+  background:#ffd700;
+  color:#000;
+  padding:12px 25px;
+  text-decoration:none;
+  border-radius:25px;
+  display:inline-block;
+  margin:10px;
+  font-weight:bold;
+}
+</style>
+
+<script>
+function showDetails(){
+  document.getElementById("details").style.display="block";
+  document.getElementById("payment").style.display="none";
+}
+
+function showPayment(){
+  document.getElementById("payment").style.display="block";
+}
+</script>
+
+</head>
+
+<body>
+
+<section>
+
+<h1>🎨 Our Services</h1>
+
+<div class="box">
+<h3>Select Service</h3>
+
+<select onchange="showDetails()">
+<option value="">-- Select Service --</option>
+<option>Photo Editing</option>
+<option>Reel Shoot</option>
+<option>Video Editing</option>
+<option>Logo Design</option>
+<option>PPT Presentation</option>
+</select>
+</div>
+
+<div id="details" class="box hidden">
+<h3>💰 Charges</h3>
+
+<p>📸 <strong>Photo Editing:</strong> up to ₹100</p>
+<p>🎥 <strong>Reel Shoot:</strong> ₹500 – ₹1500</p>
+<p>🎬 <strong>Video Editing:</strong> ₹300 – ₹500 per minute</p>
+<p>🎨 <strong>Logo Design:</strong> ₹300 – ₹500</p>
+<p>📊 <strong>PPT Presentation:</strong> ₹10 – ₹15 per slide</p>
+
+<p>👉 Charges fix झाल्यावर payment करा</p>
+
+<button class="btn" onclick="showPayment()">Proceed to Payment</button>
+</div>
+
+<div id="payment" class="box hidden">
+<h3>💳 Payment Options</h3>
+
+<p><strong>UPI ID:</strong> 8788162266@fam</p>
+<p>OR</p>
+
+<img src="upi-qr.png.jpeg" style="width:220px;border-radius:10px">
+
+<p style="font-size:14px;">
+Payment झाल्यावर screenshot WhatsApp वर पाठवा
+</p>
+
+<a class="btn" href="https://wa.me/918788162266">
+Confirm on WhatsApp
+</a>
+</div>
+
+<p style="margin-top:25px;font-size:15px;">
+⏳ काम <strong>7 ते 10 दिवसांत</strong> दिलं जाईल
+</p>
+
+<a class="btn" href="index.html">⬅ Back to Home</a>
+
+</section>
+
+</body>
+</html>
