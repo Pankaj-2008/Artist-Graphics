@@ -25,6 +25,11 @@ h1{color:#ffd700}
   border-radius:12px;
   margin:20px 0;
 }
+select{
+  padding:10px;
+  border-radius:8px;
+  font-size:16px;
+}
 .btn{
   background:#ffd700;
   color:#000;
@@ -35,11 +40,14 @@ h1{color:#ffd700}
   margin:10px;
   font-weight:bold;
 }
-.note{
-  font-size:15px;
-  margin-top:25px;
-}
+.hidden{display:none;}
 </style>
+
+<script>
+function showPayment(){
+  document.getElementById("payment").style.display="block";
+}
+</script>
 </head>
 
 <body>
@@ -48,39 +56,41 @@ h1{color:#ffd700}
 
 <h1>📸 Reel Shoot</h1>
 
-<p>
-Professional Instagram Reel Shoot for College, Office & Programs.
+<p>Instagram Reel Shoot for College, Office & Events</p>
+
+<div class="box">
+<h3>🎯 Select Service</h3>
+
+<select onchange="showPayment()">
+<option value="">-- Select Reel Shoot Type --</option>
+<option>Normal Reel Shoot (₹500 – ₹1000)</option>
+<option>Program / Event Reel Shoot (₹1000 – ₹1500)</option>
+</select>
+
+<p style="margin-top:10px;font-size:14px;">
+Service select केल्यावर payment option दिसेल
+</p>
+</div>
+
+<div id="payment" class="box hidden">
+<h3>💳 Payment Options</h3>
+
+<p><strong>UPI ID:</strong> 8788162266@fam</p>
+<p>OR</p>
+
+<img src="qr.png" alt="UPI QR" style="width:220px;border-radius:10px">
+
+<p style="font-size:14px;">
+Payment झाल्यावर screenshot WhatsApp वर पाठवा
 </p>
 
-<div class="box">
-<h3>📋 Service Details</h3>
-<p>• High quality reel shooting</p>
-<p>• Best angles & lighting</p>
-<p>• Perfect for Instagram reels</p>
-<p>• College farewell, office & events</p>
-</div>
-
-<div class="box">
-<h3>💰 Charges</h3>
-<p><strong>Normal Reel Shoot:</strong> ₹500 – ₹1000</p>
-<p><strong>Program / Event Reel Shoot:</strong> ₹1000 – ₹1500</p>
-</div>
-
-<div class="box">
-<h3>📞 Work Process</h3>
-<p>1️⃣ First contact on WhatsApp</p>
-<p>2️⃣ Requirement discuss</p>
-<p>3️⃣ Charges fix झाल्यावर payment</p>
-<p>4️⃣ Reel shoot & editing starts</p>
-</div>
-
 <a class="btn" href="https://wa.me/918788162266">
-Contact on WhatsApp
+Confirm on WhatsApp
 </a>
+</div>
 
-<p class="note">
-⏳ <strong>Delivery Time:</strong><br>
-7 ते 10 दिवसांत reel तयार करून दिली जाईल.
+<p style="margin-top:20px;font-size:15px;">
+⏳ काम <strong>7 ते 10 दिवसांत</strong> दिलं जाईल
 </p>
 
 <a class="btn" href="index.html">⬅ Back to Home</a>
