@@ -15,8 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve main website files
-app.use(express.static(path.join(__dirname, "../")));
-
+app.use(express.static(path.join(__dirname, "../frontend")));
 // API Routes
 app.use("/api", orderRoutes);
 app.use("/api", portfolioRoutes);
