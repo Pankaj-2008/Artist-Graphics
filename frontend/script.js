@@ -18,7 +18,7 @@ if (form) {
         console.log("Sending order:", order);
 
         try {
-            const res = await fetch("http://localhost:5000/api/orders", {
+            const res = await fetch("/api/orders", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -54,7 +54,7 @@ const portfolioContainer =
 
 if (portfolioContainer) {
 
-    fetch("http://localhost:5000/api/portfolio")
+    fetch("/api/portfolio")
         .then(res => res.json())
         .then(projects => {
 
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
 
                 const response = await fetch(
-                    "http://localhost:5000/api/login",
+                    "/api/login",
                     {
                         method: "POST",
 

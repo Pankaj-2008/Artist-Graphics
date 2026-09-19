@@ -17,7 +17,7 @@ let allOrders = [];
 
 const table = document.getElementById("ordersTable");
 
-fetch("http://localhost:5000/api/orders", {
+fetch("/api/orders", {
     method: "GET",
     headers: {
         "Authorization": `Bearer ${adminToken}`
@@ -129,7 +129,7 @@ fetch("http://localhost:5000/api/orders", {
 
 function completeOrder(id) {
 
-    fetch(`http://localhost:5000/api/orders/${id}`, {
+    fetch(`/api/orders/${id}`, {
 
         method: "PUT",
 
@@ -169,7 +169,7 @@ function deleteOrder(id) {
     }
 
 
-    fetch(`http://localhost:5000/api/orders/${id}`, {
+    fetch(`/api/orders/${id}`, {
 
         method: "DELETE",
 
@@ -244,7 +244,7 @@ function addProject() {
     }
 
 
-    fetch("http://localhost:5000/api/portfolio", {
+    fetch("/api/portfolio", {
 
         method: "POST",
 
@@ -307,7 +307,7 @@ const portfolioList =
 
 if (portfolioList) {
 
-    fetch("http://localhost:5000/api/portfolio")
+    fetch("/api/portfolio")
 
         .then(res => res.json())
 
@@ -366,7 +366,7 @@ function deleteProject(id) {
     }
 
 
-    fetch(`http://localhost:5000/api/portfolio/${id}`, {
+    fetch(`/api/portfolio/${id}`, {
 
         method: "DELETE",
 
