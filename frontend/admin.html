@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artist Graphics | Admin Panel</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="brand-logo">AG</div>
+
+        <div>
+            <strong>Artist Graphics</strong>
+            <span>Admin Panel</span>
+        </div>
+    </div>
+
+
+    <nav class="side-nav">
+
+        <a href="#dashboard" class="active">
+            <span>▣</span>
+            Dashboard
+        </a>
+
+        <a href="#orders">
+            <span>◫</span>
+            Orders
+        </a>
+
+        <a href="#portfolio">
+            <span>▧</span>
+            Portfolio
+        </a>
+
+    </nav>
+
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div>
+            <p class="welcome">WELCOME BACK</p>
+
+            <h1>
+                Artist Graphics Admin
+            </h1>
+        </div>
+
+        <div class="admin-status">
+            <span></span>
+            Admin
+        </div>
+
+    </header>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section id="dashboard">
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    #
+                </div>
+
+                <div>
+                    <p>Total Orders</p>
+                    <h2 id="totalOrders">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    !
+                </div>
+
+                <div>
+                    <p>Pending Orders</p>
+                    <h2 id="pendingOrders">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <p>Completed Orders</p>
+                    <h2 id="completedOrders">0</h2>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ORDERS ================= -->
+
+    <section id="orders" class="panel-section">
+
+        <div class="section-title">
+
+            <div>
+                <span>MANAGEMENT</span>
+                <h2>Customer Orders</h2>
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH + FILTER -->
+
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search customer..."
+            >
+
+            <div class="filters">
+
+                <button
+                    class="filter-btn active-filter"
+                    onclick="filterOrders('All')"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterOrders('Pending')"
+                >
+                    Pending
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterOrders('Completed')"
+                >
+                    Completed
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORDER TABLE -->
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Service</th>
+                        <th>Details</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="ordersTable">
+
+                    <!-- admin.js will load orders here -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PORTFOLIO ================= -->
+
+    <section id="portfolio" class="panel-section">
+
+        <div class="section-title">
+
+            <div>
+                <span>CONTENT</span>
+                <h2>Portfolio Management</h2>
+            </div>
+
+        </div>
+
+
+        <!-- ADD PROJECT -->
+
+        <div class="add-project">
+
+            <h3>Add Portfolio Project</h3>
+
+            <p>
+                Add a new project to display on your website.
+            </p>
+
+
+            <div class="project-form">
+
+                <input
+                    type="text"
+                    id="projectTitle"
+                    placeholder="Project Title"
+                >
+
+                <input
+                    type="text"
+                    id="projectDescription"
+                    placeholder="Project Description"
+                >
+
+                <input
+                    type="text"
+                    id="projectImage"
+                    placeholder="Image URL"
+                >
+
+                <button onclick="addProject()">
+                    + Add Project
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT LIST -->
+
+        <div class="portfolio-heading">
+
+            <h3>Portfolio Projects</h3>
+
+            <span id="projectCount">
+                Your Projects
+            </span>
+
+        </div>
+
+
+        <div id="portfolioList"></div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>© 2026 Artist Graphics</span>
+
+        <span>
+            Admin Dashboard
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script src="admin.js"></script>
+
+</body>
+</html>

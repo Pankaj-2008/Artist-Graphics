@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.env
+
+frontend/videos/College.mp4
+.git_old/

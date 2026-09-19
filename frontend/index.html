@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artist Graphics | Creative Design Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        <span>AG</span>
+
+        <div>
+            <strong>Artist Graphics</strong>
+            <small>Creative Studio</small>
+        </div>
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#portfolio">Portfolio</a>
+
+        <a href="#contact">Contact</a>
+
+      <a href="#" class="admin-btn" id="adminLoginBtn">
+    Admin Login
+</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            CREATIVE DESIGN • VIDEO • VISUALS
+        </span>
+
+        <h1>
+            We Create <span>Ideas</span><br>
+            Into Visuals.
+        </h1>
+
+        <p>
+            Professional graphic design, video editing and
+            video production for brands, businesses and creators.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="btn">
+                Get a Quote →
+            </a>
+
+            <a href="#portfolio" class="outline-btn">
+                View Portfolio
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="section-heading">
+
+        <span>WHAT WE DO</span>
+
+        <h2>
+            Our <b>Services</b>
+        </h2>
+
+        <p>
+            Creative solutions designed to make your brand
+            look professional and memorable.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- SERVICE 1 -->
+
+        <div class="card">
+
+            <div class="card-number">
+                01
+            </div>
+
+            <h3>
+                Graphic Design
+            </h3>
+
+            <p>
+                Logos, posters, branding, social media posts
+                and creative designs.
+            </p>
+
+            <a href="#contact">
+                Get Started →
+            </a>
+
+        </div>
+
+
+
+        <!-- SERVICE 2 -->
+
+        <div class="card">
+
+            <div class="card-number">
+                02
+            </div>
+
+            <h3>
+                Video Editing
+            </h3>
+
+            <p>
+                Reels, YouTube videos, promotional videos
+                and cinematic edits.
+            </p>
+
+            <a href="#contact">
+                Get Started →
+            </a>
+
+        </div>
+
+
+
+        <!-- SERVICE 3 -->
+
+        <div class="card">
+
+            <div class="card-number">
+                03
+            </div>
+
+            <h3>
+                Video Shoot
+            </h3>
+
+            <p>
+                Events, products, programs and promotional
+                video shoots.
+            </p>
+
+            <a href="#contact">
+                Get Started →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DYNAMIC PORTFOLIO ================= -->
+
+<section class="dynamic-portfolio">
+
+    <div class="section-heading">
+
+        <span>
+            OUR WORK
+        </span>
+
+        <h2>
+            Featured <b>Projects</b>
+        </h2>
+
+        <p>
+            Some of our latest creative work.
+        </p>
+
+    </div>
+
+
+    <div id="portfolioContainer"></div>
+
+</section>
+
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+    <div class="section-heading">
+
+        <span>
+            PORTFOLIO
+        </span>
+
+        <h2>
+            Creative <b>Work</b>
+        </h2>
+
+        <p>
+            Explore some of our design and visual projects.
+        </p>
+
+    </div>
+
+
+    <div class="portfolio-grid">
+
+
+        <!-- ================= VIDEO PROJECT ================= -->
+
+   <div class="box vertical-video">
+
+    <video
+        controls
+        muted
+        playsinline
+        preload="metadata"
+    >
+
+        <source
+            src="./videos/College.mp4"
+            type="video/mp4"
+        >
+
+        Your browser does not support the video tag.
+
+    </video>
+
+    <div class="portfolio-overlay">
+
+        <span>
+            Video Editing
+        </span>
+
+    </div>
+
+</div>
+        <!-- ================= PROJECT 2 ================= -->
+
+        <div class="box">
+
+            <img
+                src="images/project2.jpg"
+                alt="Creative Design Project"
+            >
+
+            <div class="portfolio-overlay">
+
+                <span>
+                    Creative Design
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PROJECT 3 ================= -->
+
+        <div class="box">
+
+            <img
+                src="images/project3.jpg"
+                alt="Poster Design Project"
+            >
+
+            <div class="portfolio-overlay">
+
+                <span>
+                    Poster Design
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PROJECT 4 ================= -->
+
+        <div class="box">
+
+            <img
+                src="images/project4.jpg"
+                alt="Branding Project"
+            >
+
+            <div class="portfolio-overlay">
+
+                <span>
+                    Branding
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="section-heading">
+
+        <span>
+            LET'S WORK TOGETHER
+        </span>
+
+        <h2>
+            Start Your <b>Project</b>
+        </h2>
+
+        <p>
+            Tell us about your project and we'll get back to you.
+        </p>
+
+    </div>
+
+
+    <form id="contactForm">
+
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            required
+        >
+
+
+        <input
+            type="tel"
+            placeholder="Phone Number"
+            required
+        >
+
+
+        <select required>
+
+            <option value="">
+                Select Service
+            </option>
+
+            <option>
+                Graphic Design
+            </option>
+
+            <option>
+                Video Editing
+            </option>
+
+            <option>
+                Video Shoot
+            </option>
+
+        </select>
+
+
+        <textarea
+            placeholder="Tell us about your project..."
+        ></textarea>
+
+
+        <button type="submit">
+            Send Request →
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div>
+
+            <div class="footer-logo">
+                AG
+            </div>
+
+            <h3>
+                Artist Graphics
+            </h3>
+
+            <p>
+                Creative design & visual production studio.
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-links">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-links">
+
+            <h4>
+                Services
+            </h4>
+
+            <a href="#services">
+                Graphic Design
+            </a>
+
+            <a href="#services">
+                Video Editing
+            </a>
+
+            <a href="#services">
+                Video Shoot
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Artist Graphics. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+console.log("🔥 NEW INDEX HTML LOADED");
+</script>
+<script src="script.js"></script>
+<!-- ================= ADMIN LOGIN MODAL ================= -->
+
+<div id="loginModal" class="login-modal">
+
+    <div class="login-box">
+
+        <button class="close-login" id="closeLogin">
+            ×
+        </button>
+
+        <div class="login-logo">
+            AG
+        </div>
+
+        <h2>Admin Login</h2>
+
+        <p>Login to manage Artist Graphics</p>
+
+        <form id="loginForm">
+
+            <input
+                type="text"
+                id="adminUsername"
+                placeholder="Username"
+                required
+            >
+
+            <input
+                type="password"
+                id="adminPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">
+                Login →
+            </button>
+
+        </form>
+
+        <div id="loginError"></div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
