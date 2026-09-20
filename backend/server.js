@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const portfolioRoutes = require("./routes/portfolioRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const authRoutes = require("./routes/authRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 app.use("/api", orderRoutes);
 app.use("/api", portfolioRoutes);
 app.use("/api", authRoutes);
+app.use("/api", paymentRoutes);
 
 // MongoDB
 const MONGO_URI = process.env.MONGO_URI;

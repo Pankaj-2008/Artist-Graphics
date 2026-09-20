@@ -6,35 +6,6 @@ const authMiddleware = require("../middleware/authMiddleware");
 
 
 // ==========================================
-// SAVE ORDER
-// Customer website वरून order submit
-// ही route PUBLIC ठेवली आहे
-// ==========================================
-
-router.post("/orders", async (req, res) => {
-
-    try {
-
-        const order = new Order(req.body);
-
-        await order.save();
-
-        res.status(201).json({
-            message: "Order Saved Successfully"
-        });
-
-    } catch (error) {
-
-        res.status(500).json({
-            message: error.message
-        });
-
-    }
-
-});
-
-
-// ==========================================
 // GET ALL ORDERS
 // फक्त logged-in admin
 // ==========================================
