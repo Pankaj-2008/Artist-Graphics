@@ -17,12 +17,16 @@
 <aside class="sidebar">
 
     <div class="brand">
-        <div class="brand-logo">AG</div>
+
+        <div class="brand-logo">
+            AG
+        </div>
 
         <div>
             <strong>Artist Graphics</strong>
             <span>Admin Panel</span>
         </div>
+
     </div>
 
 
@@ -63,16 +67,24 @@
     <header class="topbar">
 
         <div>
-            <p class="welcome">WELCOME BACK</p>
+
+            <p class="welcome">
+                WELCOME BACK
+            </p>
 
             <h1>
                 Artist Graphics Admin
             </h1>
+
         </div>
 
+
         <div class="admin-status">
+
             <span></span>
+
             Admin
+
         </div>
 
     </header>
@@ -84,6 +96,7 @@
 
         <div class="stats">
 
+
             <div class="stat-box">
 
                 <div class="stat-icon">
@@ -91,8 +104,15 @@
                 </div>
 
                 <div>
-                    <p>Total Orders</p>
-                    <h2 id="totalOrders">0</h2>
+
+                    <p>
+                        Total Orders
+                    </p>
+
+                    <h2 id="totalOrders">
+                        0
+                    </h2>
+
                 </div>
 
             </div>
@@ -105,8 +125,15 @@
                 </div>
 
                 <div>
-                    <p>Pending Orders</p>
-                    <h2 id="pendingOrders">0</h2>
+
+                    <p>
+                        Pending Orders
+                    </p>
+
+                    <h2 id="pendingOrders">
+                        0
+                    </h2>
+
                 </div>
 
             </div>
@@ -119,11 +146,19 @@
                 </div>
 
                 <div>
-                    <p>Completed Orders</p>
-                    <h2 id="completedOrders">0</h2>
+
+                    <p>
+                        Completed Orders
+                    </p>
+
+                    <h2 id="completedOrders">
+                        0
+                    </h2>
+
                 </div>
 
             </div>
+
 
         </div>
 
@@ -134,11 +169,19 @@
 
     <section id="orders" class="panel-section">
 
+
         <div class="section-title">
 
             <div>
-                <span>MANAGEMENT</span>
-                <h2>Customer Orders</h2>
+
+                <span>
+                    MANAGEMENT
+                </span>
+
+                <h2>
+                    Customer Orders
+                </h2>
+
             </div>
 
         </div>
@@ -148,11 +191,13 @@
 
         <div class="toolbar">
 
+
             <input
                 type="text"
                 id="searchInput"
                 placeholder="Search customer..."
             >
+
 
             <div class="filters">
 
@@ -177,12 +222,26 @@
                     Completed
                 </button>
 
+                <button
+                    class="filter-btn"
+                    onclick="filterOrders('Payment Verification Pending')"
+                >
+                    Payment Verification
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterOrders('Paid')"
+                >
+                    Paid
+                </button>
+
             </div>
 
         </div>
 
 
-        <!-- ORDER TABLE -->
+        <!-- ================= ORDER TABLE ================= -->
 
         <div class="table-wrapper">
 
@@ -191,13 +250,51 @@
                 <thead>
 
                     <tr>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Service</th>
-                        <th>Details</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Action</th>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Phone
+                        </th>
+
+                        <th>
+                            Service
+                        </th>
+
+                        <th>
+                            Details
+                        </th>
+
+                        <th>
+                            Payment
+                        </th>
+
+                        <th>
+                            UTR
+                        </th>
+
+                        <th>
+                            Screenshot
+                        </th>
+
+                        <th>
+                            Payment Status
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Order Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
                     </tr>
 
                 </thead>
@@ -218,13 +315,23 @@
 
     <!-- ================= PORTFOLIO ================= -->
 
-    <section id="portfolio" class="panel-section">
+    <section
+        id="portfolio"
+        class="panel-section"
+    >
 
         <div class="section-title">
 
             <div>
-                <span>CONTENT</span>
-                <h2>Portfolio Management</h2>
+
+                <span>
+                    CONTENT
+                </span>
+
+                <h2>
+                    Portfolio Management
+                </h2>
+
             </div>
 
         </div>
@@ -234,7 +341,9 @@
 
         <div class="add-project">
 
-            <h3>Add Portfolio Project</h3>
+            <h3>
+                Add Portfolio Project
+            </h3>
 
             <p>
                 Add a new project to display on your website.
@@ -243,11 +352,13 @@
 
             <div class="project-form">
 
+
                 <input
                     type="text"
                     id="projectTitle"
                     placeholder="Project Title"
                 >
+
 
                 <input
                     type="text"
@@ -255,11 +366,13 @@
                     placeholder="Project Description"
                 >
 
+
                 <input
                     type="text"
                     id="projectImage"
                     placeholder="Image URL"
                 >
+
 
                 <button onclick="addProject()">
                     + Add Project
@@ -274,7 +387,9 @@
 
         <div class="portfolio-heading">
 
-            <h3>Portfolio Projects</h3>
+            <h3>
+                Portfolio Projects
+            </h3>
 
             <span id="projectCount">
                 Your Projects
@@ -292,7 +407,9 @@
 
     <footer>
 
-        <span>© 2026 Artist Graphics</span>
+        <span>
+            © 2026 Artist Graphics
+        </span>
 
         <span>
             Admin Dashboard
@@ -300,10 +417,14 @@
 
     </footer>
 
+
 </main>
 
+
+<!-- ================= SCRIPT ================= -->
 
 <script src="admin.js"></script>
 
 </body>
+
 </html>

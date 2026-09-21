@@ -964,3 +964,69 @@ footer {
     }
 
 }
+/* ==========================================
+   PAYMENT ACTION BUTTONS
+========================================== */
+
+.paid-btn,
+.reject-btn {
+    border: none;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 2px;
+    display: inline-block;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+
+/* PAID */
+
+.paid-btn {
+    background: #16a34a;
+}
+
+.paid-btn:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+}
+
+
+/* REJECT */
+
+.reject-btn {
+    background: #dc2626;
+}
+
+.reject-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   VIEW SCREENSHOT - WHITE TEXT ONLY
+========================================== */
+
+.view-payment-btn {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+    padding: 2px 4px !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: none !important;
+}
+
+.view-payment-btn:hover {
+    color: #d1d5db !important;
+    text-decoration: underline;
+    background: transparent !important;
+}

@@ -24,7 +24,6 @@
         </div>
     </div>
 
-
     <nav>
 
         <a href="#home">Home</a>
@@ -35,14 +34,13 @@
 
         <a href="#contact">Contact</a>
 
-      <a href="#" class="admin-btn" id="adminLoginBtn">
-    Admin Login
-</a>
+        <a href="#" class="admin-btn" id="adminLoginBtn">
+            Admin Login
+        </a>
 
     </nav>
 
 </header>
-
 
 
 <!-- ================= HERO ================= -->
@@ -65,7 +63,6 @@
             video production for brands, businesses and creators.
         </p>
 
-
         <div class="hero-buttons">
 
             <a href="#contact" class="btn">
@@ -81,7 +78,6 @@
     </div>
 
 </section>
-
 
 
 <!-- ================= SERVICES ================= -->
@@ -105,7 +101,6 @@
 
 
     <div class="cards">
-
 
         <!-- SERVICE 1 -->
 
@@ -131,7 +126,6 @@
         </div>
 
 
-
         <!-- SERVICE 2 -->
 
         <div class="card">
@@ -154,7 +148,6 @@
             </a>
 
         </div>
-
 
 
         <!-- SERVICE 3 -->
@@ -185,7 +178,6 @@
 </section>
 
 
-
 <!-- ================= DYNAMIC PORTFOLIO ================= -->
 
 <section class="dynamic-portfolio">
@@ -210,7 +202,6 @@
     <div id="portfolioContainer"></div>
 
 </section>
-
 
 
 <!-- ================= PORTFOLIO ================= -->
@@ -239,33 +230,35 @@
 
         <!-- ================= VIDEO PROJECT ================= -->
 
-   <div class="box vertical-video">
+        <div class="box vertical-video">
 
-    <video
-        controls
-        muted
-        playsinline
-        preload="metadata"
-    >
+            <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+            >
 
-        <source
-            src="./videos/College.mp4"
-            type="video/mp4"
-        >
+                <source
+                    src="./videos/College.mp4"
+                    type="video/mp4"
+                >
 
-        Your browser does not support the video tag.
+                Your browser does not support the video tag.
 
-    </video>
+            </video>
 
-    <div class="portfolio-overlay">
+            <div class="portfolio-overlay">
 
-        <span>
-            Video Editing
-        </span>
+                <span>
+                    Video Editing
+                </span>
 
-    </div>
+            </div>
 
-</div>
+        </div>
+
+
         <!-- ================= PROJECT 2 ================= -->
 
         <div class="box">
@@ -286,7 +279,6 @@
         </div>
 
 
-
         <!-- ================= PROJECT 3 ================= -->
 
         <div class="box">
@@ -305,7 +297,6 @@
             </div>
 
         </div>
-
 
 
         <!-- ================= PROJECT 4 ================= -->
@@ -333,7 +324,6 @@
 </section>
 
 
-
 <!-- ================= CONTACT ================= -->
 
 <section id="contact">
@@ -358,47 +348,175 @@
     <form id="contactForm">
 
 
+        <!-- NAME -->
+
         <input
             type="text"
+            id="customerName"
             placeholder="Your Name"
             required
         >
 
 
+        <!-- PHONE -->
+
         <input
             type="tel"
+            id="customerPhone"
             placeholder="Phone Number"
             required
         >
 
 
-        <select required>
+        <!-- SERVICE -->
+
+        <select id="serviceSelect" required>
 
             <option value="">
                 Select Service
             </option>
 
-            <option>
+            <option value="Graphic Design">
                 Graphic Design
             </option>
 
-            <option>
+            <option value="Video Editing">
                 Video Editing
             </option>
 
-            <option>
+            <option value="Video Shoot">
                 Video Shoot
             </option>
 
         </select>
 
 
+        <!-- PAYMENT MODE -->
+
+        <select id="paymentMode" required>
+
+            <option value="">
+                Select Payment Mode
+            </option>
+
+            <option value="online">
+                Online UPI Payment
+            </option>
+
+            <option value="offline">
+                Offline / Call Request
+            </option>
+
+        </select>
+
+
+        <!-- ================= ONLINE PAYMENT BOX ================= -->
+
+        <div
+            id="onlinePaymentBox"
+            style="display: none;"
+        >
+
+            <div class="payment-info">
+
+                <h3>
+                    Online UPI Payment
+                </h3>
+
+                <p>
+                    Pay using Google Pay, PhonePe, BHIM or any UPI app.
+                </p>
+
+                <!-- QR CODE WILL BE ADDED HERE -->
+
+                <div
+                    id="upiQrContainer"
+                    style="display: none;"
+                >
+
+                    <img
+                        id="upiQrImage"
+                        src=""
+                        alt="UPI QR Code"
+                    >
+
+                </div>
+
+
+                <div
+                    id="paymentAmount"
+                    style="display: none;"
+                ></div>
+
+
+                <!-- UTR -->
+
+                <input
+                    type="text"
+                    id="utr"
+                    placeholder="Enter UTR / Transaction ID"
+                >
+
+
+                <!-- SCREENSHOT -->
+
+                <label for="paymentScreenshot">
+                    Payment Screenshot
+                </label>
+
+                <input
+                    type="file"
+                    id="paymentScreenshot"
+                    accept="image/*"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= OFFLINE INFO ================= -->
+
+        <div
+            id="offlinePaymentBox"
+            style="display: none;"
+        >
+
+            <div class="payment-info">
+
+                <h3>
+                    📞 Call Request
+                </h3>
+
+                <p>
+                    Select this option if you want us to call you
+                    regarding your project and payment.
+                </p>
+
+                <p>
+                    Our team will contact you on the phone number
+                    provided above.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT DETAILS -->
+
         <textarea
+            id="projectDetails"
             placeholder="Tell us about your project..."
         ></textarea>
 
 
-        <button type="submit">
+        <!-- SUBMIT BUTTON -->
+
+        <button
+            type="submit"
+            id="submitOrderBtn"
+        >
             Send Request →
         </button>
 
@@ -406,7 +524,6 @@
     </form>
 
 </section>
-
 
 
 <!-- ================= FOOTER ================= -->
@@ -435,7 +552,6 @@
         </div>
 
 
-
         <!-- QUICK LINKS -->
 
         <div class="footer-links">
@@ -461,7 +577,6 @@
             </a>
 
         </div>
-
 
 
         <!-- SERVICES -->
@@ -499,19 +614,25 @@
 </footer>
 
 
-
 <!-- ================= JAVASCRIPT ================= -->
+
 <script>
 console.log("🔥 NEW INDEX HTML LOADED");
 </script>
+
 <script src="script.js"></script>
+
+
 <!-- ================= ADMIN LOGIN MODAL ================= -->
 
 <div id="loginModal" class="login-modal">
 
     <div class="login-box">
 
-        <button class="close-login" id="closeLogin">
+        <button
+            class="close-login"
+            id="closeLogin"
+        >
             ×
         </button>
 
@@ -519,9 +640,13 @@ console.log("🔥 NEW INDEX HTML LOADED");
             AG
         </div>
 
-        <h2>Admin Login</h2>
+        <h2>
+            Admin Login
+        </h2>
 
-        <p>Login to manage Artist Graphics</p>
+        <p>
+            Login to manage Artist Graphics
+        </p>
 
         <form id="loginForm">
 
@@ -550,6 +675,7 @@ console.log("🔥 NEW INDEX HTML LOADED");
     </div>
 
 </div>
+
 
 </body>
 
