@@ -2,8 +2,15 @@ const express = require("express");
 const router = express.Router();
 const Order = require("../models/Order");
 
-// Services and their prices
-// इथे तुझे actual prices नंतर बदलू शकतोस.
+const {
+    sendAdminOrderEmail
+} = require("../emailService");
+
+
+// =====================================================
+// SERVICES AND PRICES
+// =====================================================
+
 const SERVICE_PRICES = {
     "Graphic Design": 300,
     "Video Editing": 500,
@@ -16,7 +23,9 @@ const SERVICE_PRICES = {
 // =====================================================
 
 router.post("/payment/online", async (req, res) => {
+
     try {
+
         const {
             name,
             phone,
@@ -26,27 +35,36 @@ router.post("/payment/online", async (req, res) => {
             paymentScreenshot
         } = req.body;
 
+
         // Required fields
         if (!name || !phone || !service || !utr) {
+
             return res.status(400).json({
                 message: "Name, phone, service and UTR are required."
             });
+
         }
+
 
         // Check service
         const amount = SERVICE_PRICES[service];
 
         if (!amount) {
+
             return res.status(400).json({
                 message: "Invalid service selected."
             });
+
         }
+
 
         // Create order
         const order = new Order({
+
             name,
             phone,
             service,
+
             details: details || "",
 
             paymentMode: "Online",
@@ -58,24 +76,64 @@ router.post("/payment/online", async (req, res) => {
             utr: utr.trim(),
 
             paymentScreenshot: paymentScreenshot || ""
+
         });
 
+
+        // Save order
         await order.save();
 
+        console.log("✅ Online order saved:", order._id);
+
+
+        // Send email
+        try {
+
+            await sendAdminOrderEmail(order);
+
+            console.log("📧 Admin email sent successfully");
+
+        } catch (emailError) {
+
+            console.error(
+                "⚠️ Admin email failed:",
+                emailError.message
+            );
+
+        }
+
+
+        // Response
         res.status(201).json({
-            message: "Payment verification request submitted successfully.",
+
+            message:
+                "Payment verification request submitted successfully.",
+
             orderId: order._id,
+
             amount
+
         });
+
 
     } catch (error) {
-        console.error("Online payment request error:", error);
+
+        console.error(
+            "Online payment request error:",
+            error
+        );
 
         res.status(500).json({
-            message: "Failed to submit payment request."
+
+            message:
+                "Failed to submit payment request."
+
         });
+
     }
+
 });
+
 
 
 // =====================================================
@@ -83,7 +141,9 @@ router.post("/payment/online", async (req, res) => {
 // =====================================================
 
 router.post("/payment/offline", async (req, res) => {
+
     try {
+
         const {
             name,
             phone,
@@ -91,27 +151,42 @@ router.post("/payment/offline", async (req, res) => {
             details
         } = req.body;
 
+
         // Required fields
         if (!name || !phone || !service) {
+
             return res.status(400).json({
-                message: "Name, phone and service are required."
+
+                message:
+                    "Name, phone and service are required."
+
             });
+
         }
+
 
         // Check service
         const amount = SERVICE_PRICES[service];
 
         if (!amount) {
+
             return res.status(400).json({
-                message: "Invalid service selected."
+
+                message:
+                    "Invalid service selected."
+
             });
+
         }
+
 
         // Create call request
         const order = new Order({
+
             name,
             phone,
             service,
+
             details: details || "",
 
             paymentMode: "Offline",
@@ -119,22 +194,62 @@ router.post("/payment/offline", async (req, res) => {
             paymentStatus: "Call Requested",
 
             status: "Call Requested"
+
         });
 
+
+        // Save order
         await order.save();
 
+        console.log("✅ Offline order saved:", order._id);
+
+
+        // Send email
+        try {
+
+            await sendAdminOrderEmail(order);
+
+            console.log(
+                "📧 Admin email sent successfully"
+            );
+
+        } catch (emailError) {
+
+            console.error(
+                "⚠️ Admin email failed:",
+                emailError.message
+            );
+
+        }
+
+
+        // Response
         res.status(201).json({
-            message: "Call request submitted successfully.",
+
+            message:
+                "Call request submitted successfully.",
+
             orderId: order._id
+
         });
+
 
     } catch (error) {
-        console.error("Offline call request error:", error);
+
+        console.error(
+            "Offline call request error:",
+            error
+        );
 
         res.status(500).json({
-            message: "Failed to submit call request."
+
+            message:
+                "Failed to submit call request."
+
         });
+
     }
+
 });
 
 
